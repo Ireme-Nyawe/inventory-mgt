@@ -42,30 +42,16 @@ require '../connection.php';
     </form>
   </div>  <hr>
   <?php
-  if(isset($_POST['add_empo'])){
-      $email=$_POST['email'];
-      $names=$_POST['names'];
-      $password=$_POST['password'];
-    if($names==""){
-        echo "User's Names Are Required!";
-    }
-    else if($password==""){
-        echo "Password Can't Be Empty!";
-    }
-    else{
-        $query="INSERT into users values(null,'$names','employee','$email','$password')";
-        $execute=mysqli_query($connect,$query);
-        if($execute){
-            echo "Success .";
-        }
-       
-
-    }
-
-    
-  }
   $query="SELECT * from stock,operation where stock.id=operation.id";
   $execute=mysqli_query($connect,$query);
+  if(isset($_POST['view_report'])){
+    $date=$_POST['date'];
+    $date1=$_POST['date1'];
+    $date2=$_POST['date2'];
+    $type=$_POST['type'];
+
+  }
+
   ?>
   <div class="table-display">
     <table width="100%" border="1">

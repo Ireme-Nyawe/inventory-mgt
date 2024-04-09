@@ -11,6 +11,8 @@ header("location:../login.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="../scripts/jquery-3.6.0.js"></script>
+    <script src="../scripts/home.js"></script>
 </head>
 <body>
    <div class="menu">
@@ -29,12 +31,14 @@ header("location:../login.php");
    <div class="display-table">
     <?php
     $query="SELECT * from stock";
+    $_SESSION['session_query']=$query;
     ?>
     <table border="1" width="100%">
         <tr>
             <th colspan="100">
                 <span>Available Stock</span>
                 <a href="stock-pdf.php" target="_target"><button>Generate Report-pdf</button></a>
+                <a href="sample-pdf.php" target="_target"><button>Sample Report-pdf</button></a>
         </th>
     </tr>
     <tr>
@@ -60,6 +64,7 @@ header("location:../login.php");
             </tr>
             <?php
             $total_value=$total_value+$total_price;
+            $no++;
         }
         ?>
         <tr>
