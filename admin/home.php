@@ -34,7 +34,7 @@ header("location:../login.php");
         <tr>
             <th colspan="100">
                 <span>Available Stock</span>
-                <button>Generate Report-pdf</button>
+                <a href="stock-pdf.php" target="_target"><button>Generate Report-pdf</button></a>
         </th>
     </tr>
     <tr>
