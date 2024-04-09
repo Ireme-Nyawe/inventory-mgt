@@ -21,15 +21,19 @@ header("location:../login.php");
             <a href="add-employee.php">Add Employee</a>
         </li>
         <li>
-            <a href="report.php">Report</a>
+            <a id="" href="home.php">Stock</a>
         </li>
         <li>
-            <a href="../logout.php">Logout</a>
+            <a id="report" href="report.php">Report</a>
+        </li>
+        <li>
+            <a id="" href="../logout.php">Logout</a>
         </li>
     </ul>
    </div>
-   <div class="display-table">
+   <div class="display_table">
     <?php
+    $id=12;
     $query="SELECT * from stock";
     $_SESSION['session_query']=$query;
     ?>

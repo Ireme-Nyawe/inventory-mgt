@@ -5,7 +5,7 @@ require "../connection.php";
 $pdf=new FPDF();
 $pdf->addpage();
 $pdf->setfont("arial","B",12);
-$query=$_SESSION['session_query'];
+$query=$_SESSION['session_query'];;
 $pdf->Cell(50,10,"STOCK OVERVIEW REPORT",0,1);
 $pdf->Cell(10,10,"#",1,0,"C");
 $pdf->Cell(70,10,"Name",1,0,"C");
