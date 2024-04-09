@@ -49,7 +49,7 @@ header("location:../login.php");
             }
             else{
 
-                $query="INSERT into stock values(null,'$name','0','$price')";
+                $query="INSERT into stock values(null,'$name','$price',0)";
                 $execute=mysqli_query($connect,$query);
                 if($execute){
                     echo "success";
